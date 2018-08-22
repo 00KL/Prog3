@@ -21,14 +21,6 @@ public class Departamento {
 
 	public void setGerente(String nome, float salario) {
 		this.gerente = new Gerente(nome, salario);
-		this.gerente.setSubordinados(this.listaDFuncionarios);
-	}
-	
-	public void setGerente(Funcionario f) {
-		this.gerente = new Gerente(f.getNome(), f.getSalario());
-		this.retiraFuncionario(f);
-		
-		this.gerente.setSubordinados(this.listaDFuncionarios);
 	}
 	
 

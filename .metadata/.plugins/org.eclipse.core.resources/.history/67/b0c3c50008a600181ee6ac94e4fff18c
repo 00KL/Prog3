@@ -5,11 +5,7 @@ package lab2;
 //* Adicione a esta empresa alguns departamentos; X
 //* Adicione aos departamentos alguns funcionários; X
 //* Dê aumento de 10% a todos os funcionários de um determinado departamento; X
-//* Transfira um funcionário de um departamento para outro. X
-
-//Fazer uma classe gerente que herda características da classe funcionário. 
-//Essa classe deve ter uma listagem dos subordinados e cada departamento 
-//deve ter um gerente X
+//* Transfira um funcionário de um departamento para outro. 
 
 public class Testador {
 	public static void main(String args[]) {
@@ -48,11 +44,8 @@ public class Testador {
 		
 		//Fazer uma classe gerente que herda características da classe funcionário. 
 		//Essa classe deve ter uma listagem dos subordinados e cada departamento 
-		//deve ter um gerente X
+		//deve ter um gerente
 		n.setGerente(a);
-		v.setGerente(d);
-		
-		
 	}
 	
 	

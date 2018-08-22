@@ -9,7 +9,7 @@ public class Gerente extends Funcionario {
 	private java.util.LinkedList<Funcionario> subordinados;
 	
 	public java.util.LinkedList<Funcionario> getSubordinados() {
-		java.util.LinkedList<Funcionario> copia = new java.util.LinkedList<Funcionario>(this.subordinados);
+		java.util.LinkedList<Funcionario> copia = new java.util.LinkedList<Funcionario>(subordinados);
 		return copia;
 	}
 

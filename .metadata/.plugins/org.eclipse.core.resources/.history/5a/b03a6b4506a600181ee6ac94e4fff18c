@@ -14,24 +14,6 @@ public class Departamento {
 		this.listaDFuncionarios = new java.util.LinkedList<Funcionario>();
 	}
 	
-	
-	public Gerente getGerente() {
-		return gerente;
-	}
-
-	public void setGerente(String nome, float salario) {
-		this.gerente = new Gerente(nome, salario);
-		this.gerente.setSubordinados(this.listaDFuncionarios);
-	}
-	
-	public void setGerente(Funcionario f) {
-		this.gerente = new Gerente(f.getNome(), f.getSalario());
-		this.retiraFuncionario(f);
-		
-		this.gerente.setSubordinados(this.listaDFuncionarios);
-	}
-	
-
 	public String getNome() {
 		return nome;
 	}
