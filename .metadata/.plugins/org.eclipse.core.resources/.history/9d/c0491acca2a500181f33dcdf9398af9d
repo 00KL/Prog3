@@ -1,0 +1,10 @@
+package lab2;
+
+public class Gerente extends Funcionario {
+
+	public Gerente(String nome, float salario) {
+		super(nome, salario);
+		// TODO Auto-generated constructor stub
+	}
+
+}

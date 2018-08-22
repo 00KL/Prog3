@@ -7,6 +7,7 @@ package lab2;
 public class Departamento {
 	private String nome;
 	private java.util.LinkedList<Funcionario> listaDFuncionarios;
+	private Gerente gerente;
 	
 	public Departamento(String nome) {
 		this.nome = nome;
