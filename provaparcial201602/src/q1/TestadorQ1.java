@@ -47,6 +47,10 @@ public class TestadorQ1 {
 		d.addSubDepartamento("dev_hub");
 		
 		//Lista subDepartamentos
+		d.printaSubDepartamentos();
+		
+		//Printa departamento de um funcionario
+		Funcionario f = funcio
 		
 
 	}

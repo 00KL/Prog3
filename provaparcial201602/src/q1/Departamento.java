@@ -6,6 +6,7 @@ class Departamento extends UnidadeDeLotacao {
 	public Departamento(String nome) {
 		super(nome);
 		// TODO Auto-generated constructor stub
+		this.subDepartamentos = new java.util.LinkedList<>();
 	}
 
 	public java.util.LinkedList<SubDepartamento> getSubDepartamentos() {
@@ -21,9 +22,9 @@ class Departamento extends UnidadeDeLotacao {
 		
 		return sub;
 	}
-	public printaSubDepartamentos() {
-		for(subDepartamento s: subDepartamentos) {
-			
+	public void printaSubDepartamentos() {
+		for(SubDepartamento s:subDepartamentos) {
+			System.out.println(s.getNome());
 		}
 	}
 	

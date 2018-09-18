@@ -47,6 +47,9 @@ public class Funcionario {
 	public void setUnidadeDeLotacao(UnidadeDeLotacao unidadeDeLotacao) {
 		this.unidadeDeLotacao = unidadeDeLotacao;
 	}
+	public void print_Departamento() {
+		System.out.println(this.unidadeDeLotacao.getNome());
+	}
 	
 	
 	
