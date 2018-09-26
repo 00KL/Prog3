@@ -13,16 +13,12 @@ public class UnidadeDeLotacao {
 	}
 	
 	public java.util.LinkedList<Funcionario> getFuncionario() {
-		return funcionarios;
+		java.util.LinkedList<Funcionario> f = new java.util.LinkedList<>(funcionarios);
+		return f;
 	}
 	public void setFuncionario(String nome, String cpf, float salario) {
 		Funcionario f = new Funcionario(nome, cpf, salario, this);
 		this.funcionarios.add(f);
-	}
-	public void print_Funcionarios() {
-		for (Funcionario f:funcionarios) {
-			System.out.println(f.getNome()); 
-		}
 	}
 	
 	public String getNome() {
@@ -32,4 +28,9 @@ public class UnidadeDeLotacao {
 		this.nome = nome;
 	}
 	
+	public void aumento(float a) {
+		for (Funcionario funcionario : funcionarios) {
+			funcionario.aumentoF(a);
+		}
+	}
 }

@@ -39,7 +39,11 @@ public class TestadorQ1 {
 		d.setFuncionario("Cezar", "345-10", 10000);
 		
 		//Lista funcionarios
-		d.print_Funcionarios();
+		java.util.LinkedList<Funcionario> f = d.getFuncionario();
+		for (Funcionario funcionario : f) {
+			System.out.println(funcionario.getNome());
+			System.out.println(funcionario.getUnidadeDeLotacao().getNome());
+		}
 		
 		//Preenche subDepartamento
 		d.addSubDepartamento("dev_games");
@@ -47,11 +51,20 @@ public class TestadorQ1 {
 		d.addSubDepartamento("dev_hub");
 		
 		//Lista subDepartamentos
-		d.printaSubDepartamentos();
+		java.util.LinkedList<SubDepartamento> imprime = d.getSubDepartamentos();
+		for (SubDepartamento subDepartamento : imprime) {
+			System.out.println(subDepartamento.getNome());
+		}
 		
-		//Printa departamento de um funcionario
-		Funcionario f = funcio
-		
+		//Aumento para um departamento e seus subDepartamentos
+		for (Funcionario func : f) {
+			System.out.printf("Salario: %.0f\n", func.getSalario());
+		}
+		System.out.printf("\n\n\n");
+		d.aumento(5);
+		for (Funcionario func : f) {
+			System.out.printf("Salario: %.0f\n", func.getSalario());
+		}
 
 	}
 

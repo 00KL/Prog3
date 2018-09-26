@@ -10,23 +10,32 @@ class Departamento extends UnidadeDeLotacao {
 	}
 
 	public java.util.LinkedList<SubDepartamento> getSubDepartamentos() {
-		return subDepartamentos;
+		java.util.LinkedList<SubDepartamento> sub = new java.util.LinkedList<>(subDepartamentos);
+		return sub;
 	}
 
 	public void setSubDepartamentos(java.util.LinkedList<SubDepartamento> subDepartamentos) {
 		this.subDepartamentos = subDepartamentos;
 	}
+	
 	public SubDepartamento addSubDepartamento(String s) {
 		SubDepartamento sub = new SubDepartamento(s, this);
 		this.subDepartamentos.add(sub);
 		
 		return sub;
 	}
-	public void printaSubDepartamentos() {
-		for(SubDepartamento s:subDepartamentos) {
-			System.out.println(s.getNome());
+	
+	@Override
+	public void aumento(float a){
+		for (Funcionario f : this.getFuncionario()) {
+			f.aumentoF(a);
+		}
+		
+		for (SubDepartamento subDepartamento : subDepartamentos) {
+			subDepartamento.aumento(a);
 		}
 	}
+	
 	
 	
 }

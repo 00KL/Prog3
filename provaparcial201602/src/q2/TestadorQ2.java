@@ -1,5 +1,7 @@
 package q2;
 
+import java.util.Random;
+
 /**
  * Questão 2. Crie uma classe para representar personagens "Pokemón". 
  * 
@@ -53,6 +55,52 @@ interface PersonagemDeLuta<T>
 	public boolean atacar(T personagemAtacado);
 	public void regenera();
 	public int getPontosVitalidade();
+}
+
+class Pokemon implements PersonagemDeLuta<Pokemon>{
+	private int hp;
+	private int atk1;
+	private int atk2;
+	private int fullHp;
+	
+	Pokemon(int hp, int atk1, int atk2){
+		this.hp = hp;
+		this.fullHp = hp;
+		this.atk1 = atk1;
+		this.atk2 = atk2;
+	}
+
+	@Override
+	public boolean atacar(Pokemon personagemAtacado) {
+		// TODO Auto-generated method stub
+		Random r = new Random();
+		if(r.nextBoolean()) {
+			personagemAtacado.setHP(personagemAtacado.hp - this.atk1);
+		}
+		else {
+			personagemAtacado.setHP(personagemAtacado.hp - this.atk2);
+		}
+		
+		if(personagemAtacado.getPontosVitalidade() <= 0) {
+			return true;
+		}
+		return false;
+	}
+	
+	@Override
+	public void regenera() {
+		// TODO Auto-generated method stub
+		this.hp = this.fullHp;
+	}
+	@Override
+	public int getPontosVitalidade() {
+		// TODO Auto-generated method stub
+		return this.hp;
+	}
+	public void setHP(int i) {
+		this.hp = i;
+	}
+	
 }
 
 /**

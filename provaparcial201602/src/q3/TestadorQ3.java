@@ -1,5 +1,6 @@
 package q3;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 /**
@@ -40,6 +41,7 @@ public class TestadorQ3 {
 	public static void main(String[] args) {
 		
 		Scanner scanner = new Scanner(System.in);
+		scanner.useLocale(Locale.US);
 		String nomeBanco = scanner.nextLine();
 		String nomeAgencia = scanner.nextLine();
 	

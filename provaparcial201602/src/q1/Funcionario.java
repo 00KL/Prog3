@@ -38,6 +38,10 @@ public class Funcionario {
 	public void setSalario(float salario) {
 		this.salario = salario;
 	}
+	
+	public void aumentoF(float a) {
+		this.salario = this.salario + (this.salario * ( a/100) );
+	}
 
 	
 	public UnidadeDeLotacao getUnidadeDeLotacao() {
@@ -46,9 +50,6 @@ public class Funcionario {
 
 	public void setUnidadeDeLotacao(UnidadeDeLotacao unidadeDeLotacao) {
 		this.unidadeDeLotacao = unidadeDeLotacao;
-	}
-	public void print_Departamento() {
-		System.out.println(this.unidadeDeLotacao.getNome());
 	}
 	
 	
